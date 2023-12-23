@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.home {
+    text-align: center;
+}
+
+.home-content {
+    max-width: 600px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+h3 span {
+    color: #0ef;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 23px;
+    background: #0ef;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 1.5s;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover::after {
+    content: "🚀";
+    position: absolute;
+    animation: bounce 1s infinite;
+}
+
+.btn:hover {
+    background-color: #1f242d;
+    color: #0ef;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
